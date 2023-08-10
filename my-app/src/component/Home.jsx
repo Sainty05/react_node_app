@@ -15,7 +15,7 @@ export default function Home() {
           </div>
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-white-900 sm:text-6xl">
-              Hello {JSON.parse(localStorage.getItem("session")).sessionUserName}
+              Hello {JSON.parse(localStorage.getItem("session")) !== null && JSON.parse(localStorage.getItem("session")).sessionUserName}
             </h1>
             <p className="font-mono mt-12 text-lg leading-8 text-white-600">
               “Perfection is achieved not when there is nothing more to add, but rather when there is nothing more to take away.”
