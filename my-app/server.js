@@ -1,6 +1,6 @@
 // index.js
 const express = require('express');
-const cors = require('cors');
+// const cors = require('cors');
 const mongoose = require('mongoose');
 require('dotenv').config();
 const path = require('path');
@@ -17,12 +17,12 @@ app.get('*', (req, res) => {
 });
 
 // Middleware
-// app.use(cors());
-const corsOptions = {
-  origin: process.env.PORT // Replace with your allowed origin
-};
+// // app.use(cors());
+// const corsOptions = {
+//   origin: process.env.PORT // Replace with your allowed origin
+// };
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
 
 app.use(express.json());
 
