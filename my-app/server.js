@@ -6,7 +6,7 @@ require('dotenv').config();
 const path = require('path');
 
 const app = express();
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 // serve up production assets
 app.use(express.static(path.join(__dirname, 'build')));
