@@ -17,7 +17,13 @@ app.get('*', (req, res) => {
 });
 
 // Middleware
-app.use(cors());
+// app.use(cors());
+const corsOptions = {
+  origin: process.env.PORT // Replace with your allowed origin
+};
+
+app.use(cors(corsOptions));
+
 app.use(express.json());
 
 // Connect to MongoDB (using the cloud-based MongoDB connection URL)
