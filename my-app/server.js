@@ -17,11 +17,7 @@ app.get('*', (req, res) => {
 });
 
 // Middleware
-const corsOptions = {
-  origin: 'https://64d4b1367c0c664e01d23295--melodious-taiyaki-60da5a.netlify.app/'
-};
-
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(express.json());
 
 // Connect to MongoDB (using the cloud-based MongoDB connection URL)
