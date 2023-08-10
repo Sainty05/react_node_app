@@ -9,12 +9,12 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 // serve up production assets
-app.use(express.static(path.join(__dirname, 'build')));
+// app.use(express.static(path.join(__dirname, 'build')));
 
 // // Serve the React app for any other requests
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname, 'build', 'index.html'));
+// });
 
 // Middleware
 // // app.use(cors());
